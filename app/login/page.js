@@ -40,7 +40,7 @@ const LogIn = () => {
           <p className="text-red-500 text-center mb-4">
             {error}
             <br />
-            <Link href="/signup" className="text-blue-500 hover:underline">
+            <Link href="/Signup" className="text-blue-500 hover:underline">
               Sign up here
             </Link>
           </p>
@@ -89,7 +89,7 @@ const LogIn = () => {
         <div className="mt-4 text-center">
           <p className="text-sm">
             Do not have an account?{""}
-            <Link href="/signup" className="text-blue-500 hover:underline">
+            <Link href="/Signup" className="text-blue-500 hover:underline">
               Sign Up
             </Link>
           </p>

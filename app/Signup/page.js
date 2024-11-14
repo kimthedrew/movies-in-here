@@ -13,6 +13,7 @@ export default function signup() {
 
     const [message, setMessage] = useState("");
     const router = useRouter();
+    const router = useRouter();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -35,21 +36,26 @@ export default function signup() {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData),
             });
 
             if (response.ok) {
                 setMessage("Signup successful!");
+                console.log("redirecting to home page..."); 
                 console.log("Sign up successful, redirecting...")
                 
 
+                setTimeout(() => router.push ('/'), 1000);
+                //another page
                 setTimeout(() => router.push('/'), 1000);                //another page
             } else {
                 setMessage("Signup failed. Try again.");
             }
         }
         catch(error) {
+            console.error("Error during signup:", error);
             setMessage("An error occured. Please try again.");
         }
     };
@@ -57,7 +63,7 @@ export default function signup() {
     return (
         <div style={{ padding: '2rem', maxWidth: '400px', margin: '0 auto' }}>
             <h1>
-                <button> Sign Up</button> </h1>
+                Sign Up </h1>
             {message && <p>{message}</p>}
             <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem'}}>
                 <input
