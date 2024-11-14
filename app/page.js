@@ -1,12 +1,17 @@
-import Navbar from "@/components/navbar";
-import Image from "next/image";
+"use client";
+import React from "react";
+import Navbar from "@/components/Navbar";
+import TrendingMovies from "@/components/TrendingMovies";
+import TrendingSeries from "@/components/TrendingSeries";
 
-
-
-export default function Home() {
+const HomePage = () => {
   return (
-    <>
-  <Navbar/>
-    </>
+    <div className="p-4 space-y-6">
+      <Navbar />
+      <TrendingMovies />
+      <TrendingSeries />
+    </div>
   );
-}
+};
+
+export default HomePage;
