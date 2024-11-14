@@ -23,7 +23,8 @@ const Navbar = () => {
             <a href="/">Home</a>
           </li>
           <li>
-            <a href="/Movies" className="hover:text-blue-500">Movies</a>
+            <a href="/Movies" className="hover:text-blue-500">
+            Movies</a>
           </li>
           <li>
             <a href="/series">Series</a>
