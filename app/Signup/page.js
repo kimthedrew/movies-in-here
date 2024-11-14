@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function signup() {
     const [formData, setFormData] = useState({
@@ -12,6 +12,7 @@ export default function signup() {
     });
 
     const [message, setMessage] = useState("");
+    const router = useRouter();
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -33,17 +34,17 @@ export default function signup() {
             const response = await fetch('/api/signup', {
                 method: 'POST',
                 headers: {
-                    'content-Type': 'application/json',
+                    'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData),
             });
 
             if (response.ok) {
                 setMessage("Signup successful!");
+                console.log("Sign up successful, redirecting...")
                 
 
-                router.push("/Movies")
-                //another page
+                setTimeout(() => router.push('/'), 1000);                //another page
             } else {
                 setMessage("Signup failed. Try again.");
             }

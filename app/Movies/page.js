@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Navbar from "@/components/Navbar";
 
 
 
@@ -34,6 +35,7 @@ export default function Movies() {
 
   return (
     <div style={{padding: '1rem'}}>
+      <Navbar/>
       <h1>Movies</h1>
       <input
       type="text"
