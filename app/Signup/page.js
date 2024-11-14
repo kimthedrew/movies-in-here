@@ -13,7 +13,7 @@ export default function signup() {
 
     const [message, setMessage] = useState("");
     const router = useRouter();
-    const router = useRouter();
+    
 
     const handleChange = (e) => {
         const { name, value } = e.target;
